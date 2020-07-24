@@ -44,29 +44,29 @@ public class Babel{
   private static Map typeMap=new HashMap();
   private static void init() throws ClassNotFoundException{
 //    http://docs.oracle.com/javase/1.5.0/docs/guide/jdbc/getstart/mapping.html
-    typeMap.put(new Integer(java.sql.Types.BIGINT),long.class);
-    typeMap.put(new Integer(java.sql.Types.BIT),boolean.class);
-    typeMap.put(new Integer(java.sql.Types.BOOLEAN),boolean.class);
-    typeMap.put(new Integer(java.sql.Types.CHAR),char[].class);
-    typeMap.put(new Integer(java.sql.Types.DATE),java.sql.Date.class);
-    typeMap.put(new Integer(java.sql.Types.DECIMAL),char[].class);    
-    typeMap.put(new Integer(java.sql.Types.NUMERIC),char[].class);    
-    typeMap.put(new Integer(java.sql.Types.DOUBLE),double.class);
-    typeMap.put(new Integer(java.sql.Types.FLOAT),double.class);
-    typeMap.put(new Integer(java.sql.Types.INTEGER),int.class);
-    typeMap.put(new Integer(java.sql.Types.LONGVARBINARY),byte[].class);
-    typeMap.put(new Integer(java.sql.Types.LONGVARCHAR),char[].class);
-    typeMap.put(new Integer(java.sql.Types.REAL),float.class);
-    typeMap.put(new Integer(java.sql.Types.SMALLINT),int.class);
-    typeMap.put(new Integer(java.sql.Types.TIME),java.sql.Time.class);
-    typeMap.put(new Integer(java.sql.Types.TIMESTAMP),java.sql.Timestamp.class);
-    typeMap.put(new Integer(java.sql.Types.TINYINT),int.class);    
-    typeMap.put(new Integer(java.sql.Types.VARCHAR),char[].class);    
-    typeMap.put(new Integer(java.sql.Types.NCHAR),char[].class);
-   	typeMap.put(new Integer(java.sql.Types.NVARCHAR),char[].class);
-    typeMap.put(new Integer(java.sql.Types.LONGNVARCHAR),char[].class);
-    typeMap.put(new Integer(ORACLE_BINARY_FLOAT),float.class);
-    typeMap.put(new Integer(ORACLE_BINARY_DOUBLE),double.class);
+    typeMap.put(java.sql.Types.BIGINT,long.class);
+    typeMap.put(java.sql.Types.BIT,boolean.class);
+    typeMap.put(java.sql.Types.BOOLEAN,boolean.class);
+    typeMap.put(java.sql.Types.CHAR,char[].class);
+    typeMap.put(java.sql.Types.DATE,java.sql.Date.class);
+    typeMap.put(java.sql.Types.DECIMAL,char[].class);
+    typeMap.put(java.sql.Types.NUMERIC,char[].class);
+    typeMap.put(java.sql.Types.DOUBLE,double.class);
+    typeMap.put(java.sql.Types.FLOAT,double.class);
+    typeMap.put(java.sql.Types.INTEGER,int.class);
+    typeMap.put(java.sql.Types.LONGVARBINARY,byte[].class);
+    typeMap.put(java.sql.Types.LONGVARCHAR,char[].class);
+    typeMap.put(java.sql.Types.REAL,float.class);
+    typeMap.put(java.sql.Types.SMALLINT,int.class);
+    typeMap.put(java.sql.Types.TIME,java.sql.Time.class);
+    typeMap.put(java.sql.Types.TIMESTAMP,java.sql.Timestamp.class);
+    typeMap.put(java.sql.Types.TINYINT,int.class);
+    typeMap.put(java.sql.Types.VARCHAR,char[].class);
+    typeMap.put(java.sql.Types.NCHAR,char[].class);
+   	typeMap.put(java.sql.Types.NVARCHAR,char[].class);
+    typeMap.put(java.sql.Types.LONGNVARCHAR,char[].class);
+    typeMap.put(ORACLE_BINARY_FLOAT,float.class);
+    typeMap.put(ORACLE_BINARY_DOUBLE,double.class);
   }
   public static Object query(char[] connectionDetails,char[] query) throws ClassNotFoundException,SQLException{
     return queryX(false,connectionDetails, query);
